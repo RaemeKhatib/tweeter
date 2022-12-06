@@ -5,9 +5,12 @@
  */
 html {
   box-sizing: border-box;
-  font-family:"sans-serif"
+  font-family: "sans-serif"
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -20,19 +23,19 @@ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
-  font-family:"Source Sans Pro";
+  font-family: "Source Sans Pro";
   display: flex;
   flex-direction: column;
 }
 
 .logo {
-  font-family:"Bungee"
+  font-family: "Bungee"
 }
 
 .container {
   width: 90%;
   display: flex;
   justify-content: center;
-
+  margin: 0 auto;
 
 }

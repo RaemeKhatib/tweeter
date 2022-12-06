@@ -1,7 +1,7 @@
-.new-tweet{
+.new-tweet {
   display: flex;
-flex-direction: column;
-width: 100%;
+  flex-direction: column;
+  width: 100%;
 
 }
 
@@ -12,14 +12,14 @@ width: 100%;
 }
 
 .tweet-char-button {
-  display:flex;
+  display: flex;
   justify-content: space-between;
-  font-family:"Bungee";
+  font-family: "Bungee";
   margin-top: 0.5em;
 }
 
 .tweet-form {
-  display:flex;
+  display: flex;
   flex-direction: column;
 }
 
