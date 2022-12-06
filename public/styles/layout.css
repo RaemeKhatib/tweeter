@@ -16,6 +16,7 @@ html {
  */
 
 body {
+  width: 100%;
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
@@ -28,11 +29,10 @@ body {
   font-family:"Bungee"
 }
 
-main {
+.container {
+  width: 90%;
   display: flex;
-  margin-left: 5%;
-  margin-right: 5%;
   justify-content: center;
-  background-color: #f4f1ec;
+
 
 }
