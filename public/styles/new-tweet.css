@@ -25,6 +25,15 @@
 
 .input {
   background-color: #f4f1ec;
-  border: 0px;
+  border: none;
   border-bottom: 5px solid #545149;
+  margin-bottom: 15px;
+  height:2em;
+}
+
+::placeholder {
+  font-weight: bold;
+  margin-left: 50px;
+  vertical-align: bottom;
+
 }
