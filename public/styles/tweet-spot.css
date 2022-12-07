@@ -1,35 +1,72 @@
 .tweet-spot {
-  /* display:flex; */
-  /* flex-direction: column;
-  align-items: flex-start; */
+  margin-top: 10px;
   border: 5px solid #545149;
-  margin-top: 30px;
+  margin-bottom: 15px;
+
 }
+
 hr {
   margin: 2em;
   font-size: 25%;
   border: 0px;
   border-bottom: 5px solid #545149;
 }
+
 header {
   display: flex;
- justify-content: space-between;
- align-items: center;
- padding:10px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
 }
+
 header>div {
   display: flex;
   align-items: center;
 }
+
 header>div>i {
   padding-left: 15px;
 }
+
 footer>div {
-  display:flex;
+  display: flex;
   justify-content: space-between;
   padding: 0px 10px 5px 10px;
+  font-size: medium;
+}
+
+footer>div>div {
+  display: flex;
+  width: 100px;
+  justify-content: space-evenly;
+  font-size: large;
+  color: #4056a1;;
 }
 
 p {
-  padding:0px
+  padding: 10px margin 5px;
+}
+
+.likes {
+  font-size: x-small;
+ 
+}
+
+footer {
+  padding-bottom: 10px;
+}
+
+.tweet-spot:hover{
+  box-shadow: 5px 5px rgb(202, 199, 199);
+}
+
+
+.fa-flag:hover {
+color: gold;
+}
+.fa-retweet:hover{
+  color: gold;
+}
+.fa-heart:hover{
+  color: gold;
 }
