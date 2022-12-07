@@ -24,6 +24,10 @@ header>div {
   align-items: center;
 }
 
+header span {
+  padding:10px;
+}
+
 header>div>i {
   padding-left: 15px;
 }
