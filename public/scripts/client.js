@@ -1,9 +1,12 @@
+
+
+
 const createTweetElement = function(tweetObj) {
   const name = tweetObj.user.name;
   const avatar = tweetObj.user.avatars;
   const handle = tweetObj.user.handle;
   const text = tweetObj.content.text;
-  const date = tweetObj.created_at; /// will have to come back and format
+  const date = tweetObj.created_at; ///TIme Ago will have to come back and format
 
   const $tweet = $(`<article class="tweet-spot">
   <header>
@@ -35,9 +38,21 @@ const createTweetElement = function(tweetObj) {
 
 const renderTweets = function(tweets) {
   // loops through tweets
-  // calls createTweetElement for each tweet
-  $('#tweet-container').append($tweet);// takes return value and appends it to the tweets container
+  for (const tweet of tweets) {
+    const element = createTweetElement(tweet);
+
+    // calls createTweetElement for each tweet
+    $('#tweet-container').prepend(element);// takes return value and appends it to the tweets container
+  }
 };
+
+
+
+
+
+
+
+
 
 
 // Fake data taken from initial-tweets.json
@@ -67,6 +82,12 @@ const data = [
   }
 ];
 
+
+
+
+
+
+
 // Test / driver code (temporary). Eventually will get this from the server.
 const tweetData = {
   "user": {
@@ -80,8 +101,28 @@ const tweetData = {
   "created_at": 1461116232227
 };
 
-const $tweet = createTweetElement(tweetData);
-
 $(document).ready(function() {
   renderTweets(data);
+
+
+  const $form = $('#tweet-form');
+  $form.on('submit', (event) => {
+    event.preventDefault();
+    const result = $form.serialize();
+    $.post('/tweets', result, (response) => {
+
+
+      const loadTweets = () => {
+        $.get('/tweets', (tweets) => {
+          renderTweets(tweets);
+
+        });
+      };
+
+loadTweets();
+
+
+    });
+  });
 });
+

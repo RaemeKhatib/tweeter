@@ -10,7 +10,7 @@ const onChange = function(e) {
   // const text = $('.input').val();
   const remaining = 140 - text.length;
   const form = input.closest('output');
-  const output = form.fund('output');
+  const output = form.find('output');
 
   output.text(remaining);
   if (remaining < 0) {
