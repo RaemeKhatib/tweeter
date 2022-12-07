@@ -1,0 +1,35 @@
+.tweet-spot {
+  /* display:flex; */
+  /* flex-direction: column;
+  align-items: flex-start; */
+  border: 5px solid #545149;
+  margin-top: 30px;
+}
+hr {
+  margin: 2em;
+  font-size: 25%;
+  border: 0px;
+  border-bottom: 5px solid #545149;
+}
+header {
+  display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding:10px;
+}
+header>div {
+  display: flex;
+  align-items: center;
+}
+header>div>i {
+  padding-left: 15px;
+}
+footer>div {
+  display:flex;
+  justify-content: space-between;
+  padding: 0px 10px 5px 10px;
+}
+
+p {
+  padding:0px
+}
