@@ -4,8 +4,6 @@ $(document).ready(function() {
   loadTweets();
   $form.on('submit', tweetSubmitted);
 
-
-
 });
 
 const escape = function(str) {
@@ -84,8 +82,7 @@ const createTweetElement = function(tweetObj) {
 
 const renderTweets = function(tweets) {
   $('#tweet-container').empty();
-  // he has a $charactionSection.empty()
-  // loops through tweets
+
   for (const tweet of tweets) {
     const element = createTweetElement(tweet);
 
