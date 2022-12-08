@@ -28,7 +28,7 @@
   border: none;
   border-bottom: 5px solid #545149;
   margin-bottom: 15px;
-  height:2em;
+  height: 2em;
 }
 
 ::placeholder {
@@ -36,4 +36,15 @@
   margin-left: 50px;
   vertical-align: bottom;
 
+}
+
+.errors {
+  margin: 20px;
+  border: red 4px solid;
+  background-color: #f4f1ec;
+  color: red;
+  width: 100%;
+  justify-content: center;
+  padding: 10px;
+  display: none;
 }

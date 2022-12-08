@@ -4,20 +4,30 @@ $(document).ready(function() {
   loadTweets();
   $form.on('submit', tweetSubmitted);
 
+
+
 });
+
+const escape = function(str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
 
 const tweetSubmitted = (event) => {
   event.preventDefault();
 
   if (!$('#tweet-text').val()) {
-    return alert('invalid submission');
+    $('#error-msg-null').slideDown("slow", () => {});
+    return setTimeout(() => $('.errors').slideUp(), 5000);
   }
 
   if ($('#tweet-text').val().length > 140) {
-    return alert('message exceeds limit');
+    $('#error-msg-length').slideDown("slow", () => {});
+    return setTimeout(() => $('.errors').slideUp(), 5000);
   }
 
- 
+
   const result = $('#tweet-form').serialize();
   $.post('/tweets', result, () => {
     $('#tweet-text').val('');
@@ -55,7 +65,7 @@ const createTweetElement = function(tweetObj) {
       <i><strong>${handle}</strong></i>
     </div>
   </header>
-  <p>${text}</p>
+  <p>${escape(text)}</p>
   <footer>
     <hr>
     <div>
