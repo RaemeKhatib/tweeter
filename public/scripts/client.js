@@ -89,8 +89,8 @@ const renderTweets = function(tweets) {
   for (const tweet of tweets) {
     const element = createTweetElement(tweet);
 
-    // calls createTweetElement for each tweet
-    $('#tweet-container').prepend(element);// takes return value and appends it to the tweets container
+    
+    $('#tweet-container').prepend(element);
   }
 };
 
