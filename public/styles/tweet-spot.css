@@ -37,6 +37,7 @@ footer>div {
   justify-content: space-between;
   padding: 0px 10px 5px 10px;
   font-size: medium;
+
 }
 
 footer>div>div {
@@ -51,6 +52,7 @@ footer>div>div {
 p {
   padding: 10px;
   margin: 5px;
+  overflow-wrap: anywhere;
 }
 
 .likes {
@@ -63,7 +65,7 @@ footer {
 }
 
 article:hover {
-  box-shadow: 5px 5px rgb(202, 199, 199);
+  box-shadow: 5px 5px rgb(114, 112, 112);
 }
 
 
