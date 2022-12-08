@@ -41,7 +41,6 @@ const tweetSubmitted = (event) => {
 const loadTweets = () => {
   $.get('/tweets', (tweets) => {
 
-
     renderTweets(tweets);
 
   });

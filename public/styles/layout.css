@@ -43,4 +43,14 @@ body {
 .red{
   color: red;
 
+}/* Responsive scale up for computer screens */
+@media (min-width: 768px) {
+  body {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .container {
+    margin: 120px 2em 0;
+    width: 50%;
+  }
 }
