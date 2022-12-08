@@ -16,3 +16,9 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+## Final Product
+
+1.["A Snapshot of the Homepage"](https://github.com/RaemeKhatib/tweeter/blob/master/public/images/HomePage.png?raw=true)
+2. ["A Snapshot of composing a message"](https://github.com/RaemeKhatib/tweeter/blob/master/public/images/ComposeNCounter.png?raw=true)
+3. ["A Snapshot of final posted messafe"](https://github.com/RaemeKhatib/tweeter/blob/master/public/images/PostedMessage.png?raw=true)
