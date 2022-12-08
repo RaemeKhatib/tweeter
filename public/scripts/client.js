@@ -8,6 +8,16 @@ $(document).ready(function() {
 
 const tweetSubmitted = (event) => {
   event.preventDefault();
+
+  if (!$('#tweet-text').val()) {
+    return alert('invalid submission');
+  }
+
+  if ($('#tweet-text').val().length > 140) {
+    return alert('message exceeds limit');
+  }
+
+ 
   const result = $('#tweet-form').serialize();
   $.post('/tweets', result, () => {
     $('#tweet-text').val('');
@@ -33,7 +43,7 @@ const createTweetElement = function(tweetObj) {
   const avatar = tweetObj.user.avatars;
   const handle = tweetObj.user.handle;
   const text = tweetObj.content.text;
-  const date = timeago.format(tweetObj.created_at); 
+  const date = timeago.format(tweetObj.created_at);
 
   const $tweet = `<article>
   <header>
