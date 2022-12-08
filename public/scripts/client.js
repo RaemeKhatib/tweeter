@@ -10,6 +10,9 @@ const tweetSubmitted = (event) => {
   event.preventDefault();
   const result = $('#tweet-form').serialize();
   $.post('/tweets', result, () => {
+    $('#tweet-text').val('');
+    $('.counter').text(140);
+
     loadTweets();
   });
 
@@ -17,8 +20,7 @@ const tweetSubmitted = (event) => {
 
 const loadTweets = () => {
   $.get('/tweets', (tweets) => {
-    $('#tweet-text').val('');
-    $('.counter').text(140);
+
 
     renderTweets(tweets);
 
@@ -31,9 +33,9 @@ const createTweetElement = function(tweetObj) {
   const avatar = tweetObj.user.avatars;
   const handle = tweetObj.user.handle;
   const text = tweetObj.content.text;
-  const date = timeago.format(tweetObj.created_at); ///TIme Ago will have to come back and format
+  const date = timeago.format(tweetObj.created_at); 
 
-  const $tweet = $(`<article class="tweet-spot">
+  const $tweet = `<article>
   <header>
     <div>
       <img src="${avatar}">
@@ -56,13 +58,13 @@ const createTweetElement = function(tweetObj) {
       </div>
     </div>
   </footer>
-</article>`);
+</article>`;
   return $tweet;
 };
 
 
 const renderTweets = function(tweets) {
-  $('.tweet-spot').empty();
+  $('#tweet-container').empty();
   // he has a $charactionSection.empty()
   // loops through tweets
   for (const tweet of tweets) {

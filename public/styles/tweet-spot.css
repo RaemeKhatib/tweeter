@@ -1,4 +1,4 @@
-.tweet-spot {
+article {
   margin-top: 10px;
   border: 5px solid #545149;
   margin-bottom: 15px;
@@ -25,7 +25,7 @@ header>div {
 }
 
 header span {
-  padding:10px;
+  padding: 10px;
 }
 
 header>div>i {
@@ -44,33 +44,37 @@ footer>div>div {
   width: 100px;
   justify-content: space-evenly;
   font-size: large;
-  color: #4056a1;;
+  color: #4056a1;
+
 }
 
 p {
-  padding: 10px margin 5px;
+  padding: 10px;
+  margin: 5px;
 }
 
 .likes {
   font-size: x-small;
- 
+
 }
 
 footer {
   padding-bottom: 10px;
 }
 
-.tweet-spot:hover{
+article:hover {
   box-shadow: 5px 5px rgb(202, 199, 199);
 }
 
 
 .fa-flag:hover {
-color: gold;
-}
-.fa-retweet:hover{
   color: gold;
 }
-.fa-heart:hover{
+
+.fa-retweet:hover {
+  color: gold;
+}
+
+.fa-heart:hover {
   color: gold;
 }
